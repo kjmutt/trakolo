@@ -1,0 +1,11 @@
+node_modules/
+bin/
+obj/
+*.user
+.env
+.env.local
+install/.env
+install/license/
+.vs/
+.vscode/
+*.log
