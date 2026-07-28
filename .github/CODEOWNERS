@@ -1,0 +1,26 @@
+# CODEOWNERS
+# Paths are matched top to bottom; the last matching pattern wins.
+# Replace the placeholder @trakolo/* teams with real GitHub team slugs
+# before relying on this for required-review enforcement.
+
+# Default owners for anything not matched below
+*                           @trakolo/core-maintainers
+
+# Application modules — one team per module, matching the modular-monolith
+# boundaries in apps/api. A cross-module PR needs sign-off from every
+# module it touches.
+/apps/web/                  @trakolo/frontend
+/apps/api/itsm/             @trakolo/itsm-team
+/apps/api/sam/              @trakolo/sam-team
+/apps/api/dev/              @trakolo/dev-team
+/apps/api/docs/             @trakolo/docs-team
+/apps/workers/              @trakolo/platform-team
+
+# Schema changes touch every module's data — always require a platform review
+/db/                        @trakolo/platform-team
+
+# On-premise install artifacts ship with releases — release engineering signs off
+/install/                   @trakolo/release-engineering
+
+# Anything that changes how PRs are gated needs a platform-team review
+/.github/                   @trakolo/platform-team
